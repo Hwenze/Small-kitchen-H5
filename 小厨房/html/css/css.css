@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*html{*/
+    /*!*隐藏滚动条，当IE下溢出，仍然可以滚动*!*/
+    /*-ms-overflow-xstyle:none;*/
+    /*!*火狐下隐藏滚动条*!*/
+    /*overflow:-moz-scrollbars-none;*/
+/*}*/
+body{
+    background: #fff;
+    font-family: '微软雅黑';
+}
+.navbar{
+    background: #fff;
+    border: none;
+    height: 3em;
+}
+/*.container-fluid{*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+/*}*/
+.top_box{
+    display: flex;
+    justify-content:space-between;
+    line-height: 3em;
+    width: 100%;
+
+}
+.seText{
+    width:65%;
+    text-align: center;
+}
+.seText>p{
+    font-size: 1.2em;
+    padding-left: 2em;
+}
+.seText>span{
+    font-size: 1.2em;
+    color: #333;
+}
+.seText input{
+    width: 100%;
+    background:#e9e9ee url("../images/search.png") no-repeat .2em center;
+    background-size:  1.5em;
+    border: none;
+    text-indent:2em;
+    height: 2.5em;
+    border-radius: .5em;
+}
+.gongneng1{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2em;
+
+}
+.gongneng1 a{
+    text-decoration: none;
+}
+a:link {
+    color: #000;
+}     /* 未访问的链接 */
+a:visited {
+    color: #000;
+}  /* 已访问的链接 */
+a:hover {
+    color: #000;
+}    /* 当有鼠标悬停在链接上 */
+a:active {
+    color: #000;
+
+}
+.gongneng1>a>span{
+    color: #383838;
+    font-size: 1.5em;
+}
+.bottom_box{
+    display: flex;
+    justify-content:space-between;
+    line-height: 3em;
+    width: 100%;
+    background:#fff ;
+}
+.bottom_box div{
+    text-align: center;
+    width: 20%;
+}
+.bottom_box div i{
+    font-size: 1.5em;
+}
+.bottom_box div p{
+    width: 100%;
+    font-size: 1em;
+    margin-top: -1.8em;
+}
+
+.bottom_box a{
+    text-decoration: none;
+}
+#miam{
+    margin-top: 3.5em;
+}
+
+.nvigaTion{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+.nvigaTion .classnav{
+    margin:0 .1em 0 .1em;
+    width: 20%;
+    text-align: center;
+}
+.nvigaTion .classnav div{
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+}
+.nvigaTion .classnav img{
+    /*width: 100%;*/
+    width: 2em;
+}
+.nvigaTion .classnav p{
+    padding: .5em 0 .5em 0;
+}
+.activetow>i,.activetow>p{
+    color:red;
+}
+

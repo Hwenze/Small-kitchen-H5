@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+.prompt{
+    width: 100%;
+    height:10rem;
+    font-size: 1.6rem;
+    line-height: 10rem;
+    text-align: center;
+}
+.icon{
+    width:2rem;
+    height:2rem;
+    padding: .1rem .45rem;
+    /*display: inline-block;*/
+    border-radius: 50%;
+    /*text-align: center;*/
+    /*margin-top: 1rem;*/
+    background: #f5574e;
+    color: white;
+}
+.hint{
+    color:#999;
+    text-align: center;
+}
+.consignee_info{
+    padding: 4rem 1rem;
+    font-size: 1.4rem;
+    color: #666;
+    overflow: hidden;
+}
+.recipients{
+    display: inline-block;
+    width: 6rem;
+    float: left;
+}
+.address_text{
+    width: 70%;
+    float: right;
+}
+footer{
+    padding: 0 6rem;
+}
+.left_btn{
+    float: left;
+}
+.btn{
+    width: 6rem;
+    height:3rem;
+    border: 0.1rem solid #f5574e;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    color: #f5574e;
+}
+.right_btn{
+    float:right;
+}
+
+
+
+
+

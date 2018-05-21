@@ -1,0 +1,135 @@
+*,.marpad{
+	padding: 0;
+	margin: 0;
+	font-family: '微软雅黑';
+}
+a{
+	color: #333;
+}
+a:link {color: #333} /* 未访问的链接 */
+a:visited {color: #333} /* 已访问的链接 */
+a:hover {color: #333} /* 当有鼠标悬停在链接上 */
+a:active {color: #333} /* 被选择的链接 */
+
+#uploadbox{
+	position: relative;
+}
+.gongneng1{
+	animation: myfirst .5s;
+	-webkit-animation:myfirst .5s;
+	animation-fill-mode : forwards
+}
+@keyframes myfirst
+{
+	0% {transform: rotateZ(0deg);}
+	100% {transform: rotateZ(135deg);}
+}
+.toptext{
+	font-size: 1.5rem;
+}
+.uploaduser img{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	position: absolute;
+	top: 15%;
+	left:50%;
+	margin-left: -2.5rem;
+}
+.uploadtext span{
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -50%;
+	text-align: center;
+	font-size: 2rem;
+}
+.uploadcont{
+	width: 90%;
+	height: 36%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin-left: -45%;
+}
+.leftcont{
+	height: 20rem;
+	border:1px solid rgb(164,235,255);
+}
+.rightcont{
+	height: 20rem;
+	border:1px solid rgb(255,226,132);
+}
+.lefttop{
+	height: 6rem;
+	background: rgb(162,235,255);
+	text-align: center;
+	line-height: 6rem;
+}
+.lefttop span{
+	color: #fff;
+	font-size: 3rem;
+}
+.leftmain{
+	height: 6rem;
+	margin: 2rem 1rem 0;
+	background: rgb(162,235,255);
+}
+.leftbottom{
+	height: 3rem;
+	margin: 2rem 1rem 0;
+	background: rgb(162,235,255);
+}
+.righttop{
+	height: 10rem;
+	background: rgb(255,226,132);
+	text-align: center;
+	line-height: 10rem;
+}
+.righttop span{
+	color: #fff;
+	font-size: 3rem;
+}
+.rightmain{
+	height: 1rem;
+	margin: 1rem 0 0 0;
+	background: rgb(255,226,132);
+}
+.rightbottom{
+	width: 80%;
+	height: 1rem;
+	margin: 1rem 0 0 0 ;
+	background: rgb(255,226,132);
+}
+.uploadfood{
+	width: 90%;
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	margin-left: -45%;
+}
+.foodtext{
+	text-align: center;
+	font-size: 2rem;
+}
+@media screen and (min-height: 568px) {
+	.uploadfood{
+		top: 85%
+	}
+}
+@media screen and (min-height: 600px) {
+	.uploadfood{
+		top: 78%
+	}
+}
+@media screen and (min-height: 700px) {
+	.uploadfood{
+		top: 74%
+	}
+}
+@media screen and (min-height: 800px) {
+	.uploadfood{
+		top: 72%
+	}
+}

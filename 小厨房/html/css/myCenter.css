@@ -1,0 +1,198 @@
+#miam{
+    padding-bottom: 4em;
+}
+.my_user{
+    width: 100%;
+}
+.my_data{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.my_data>.user_smallbox{
+    width: 50%;
+    height: 5em;
+    padding-left: 3%;
+}
+
+.my_data>.user_smallbox>p>.user_sex{
+    color: #999;
+    font-size: .8em;
+}
+.my_data>.user_smallbox>p>.user_sex:after{
+    content: '  - ';
+}
+.my_data>.user_smallbox>p>.yese{
+
+    color: #999;
+    font-size: .8em;
+}
+.my_data>.user_pic{
+    width: 25%;
+    border-radius:50% ;
+    overflow: hidden;
+
+}
+.my_data>.user_pic>img{
+    width: 100%;
+    height: 7em;
+}
+.whether_out{
+    width: 60%;
+    height: 7em;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    margin: 30% auto;
+    left: 0;
+    right: 0;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.whether_out button{
+    width: 30%;
+    height: 2em;
+    background: -webkit-linear-gradient(#fff,#ccc);
+    border: none;
+    outline: none;
+    line-height: 2em;
+    color: #666;
+}
+.whether_out button:active{
+    background: -webkit-linear-gradient(#ccc,#fff);
+}
+/*关注盒子的样式*/
+.popularity{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+.popularity>div{
+    width: 50%;
+}
+.popularity>.follow_fans{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.popularity>.follow_fans>.follow>p{
+    padding: 0;
+    margin : 0;
+}
+.popularity>.follow_fans>.fans>p{
+    padding: 0;
+    margin : 0;
+}
+.gerenzhiliao{
+    position: relative;
+    text-align: right;
+}
+.gerenzhiliao>p{
+    position: absolute;
+    width: 80%;
+    bottom:0;
+    margin: 0;
+}
+.gerenzhiliao>p>a{
+    color: red;
+
+}
+/*统计数据盒子样式*/
+.nav_menu{
+    margin-top: 1em;
+    width: 100%;
+    border-top:.1em solid #d4d4d4 ;
+    border-bottom:.1em solid #d4d4d4 ;
+}
+.nav_center{
+    display: flex;
+    justify-content: space-around;
+}
+.nav_center>div{
+    padding-top: .5em;
+    text-align: center;
+    width: 20%;
+
+}
+.nav_center>div>span{
+    font-size: 1.7em;
+}
+.nav_center>div>p{
+    font-size: .5em;
+}
+
+
+/**/
+.nav_class{
+    margin-top: 1em;
+    width: 100%;
+}
+.nav_class>.demo{
+    display: flex;
+    width: 100%;
+}
+.nav_class>.demo>.demo_new{
+    width: 50%;
+    text-align: center;
+}
+.demo_new{
+    padding-bottom: .5em;
+}
+.tab-button:hover {
+    color: red;
+    border-bottom:0.1em solid red ;
+}
+.tab-button.active {
+    color: red;
+    border-bottom:0.1em solid red ;
+}
+.foot_pic{
+    width: 90%;
+    margin: 1em auto;
+
+}
+.foot_pic>.pic_box{
+    width: 100%;
+    position: relative;
+}
+.foot_pic>.pic_box>img{
+    width: 100%;
+}
+.dujia{
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    background:#FFC300;
+    padding: .2em .5em .2em .5em;
+    color: #fff;
+}
+.pen{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width:8%;
+}
+.pen >img{
+    width: 100%;
+}
+.data_food{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-top: .5em;
+}
+.data_food>.food_name{
+    width: 70%;
+    font-size: 1.2em;
+}
+.data_food>.small_user{
+    width: 13%;
+    border-radius:50%;
+    overflow: hidden;
+}
+.data_food>.small_user>img{
+    width: 100%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <title>加入菜单</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="bootscss/bootstrap.min.css">
+    <link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/addMenu.css">
+    <script src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/addMenu.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header id="Top" class="navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row box1">
+                <span  @click="jimp_html('menuDetails')">关闭</span>
+                <span>加入菜单</span>
+            </div>
+        </div>
+    </header>
+
+    <!--中间主体内容-->
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <!--左边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+
+                <!--中间内容  模板循环-->
+                <div class="col-sm-8 col-xs-12 box2">
+                    <!--模板循环-->
+                    <div class="box2_1">
+                        <div class="box2_1_1">
+                            <img src="images/06.jpg" alt="..." >
+                        </div>
+                        <div class="box2_1_2" >
+                            <p>懒人版糖醋排骨</p>
+                            <p>写一段描述，或理由</p>
+                        </div>
+                    </div>
+
+                    <div class="box2_1">
+                        <div class="box2_1_1">
+                            <img src="images/06.jpg" alt="..." >
+                        </div>
+                        <div class="box2_1_2" >
+                            <p>懒人版糖醋排骨</p>
+                            <p>写一段描述，或理由</p>
+                        </div>
+                    </div>
+
+                    <div class="box2_1">
+                        <div class="box2_1_1">
+                            <img src="images/06.jpg" alt="..." >
+                        </div>
+                        <div class="box2_1_2" >
+                            <p>懒人版糖醋排骨</p>
+                            <p>写一段描述，或理由</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--右边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="navbar-fixed-bottom" id="foot">
+        <div class="box3 text-center" @click="add('createMenu')">
+            创建一个菜单
+        </div>
+    </footer>
+
+</body>
+</html>

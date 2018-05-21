@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>上传</title>
+	<link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="./css/upload.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/upload.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="uploadbox" class="container-fluid">
+	<div id="Top">
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="navbar navbar-default top_hei navbar-fixed-top">
+					<div class="container-fluid">
+						<div class="top_box">
+							<div class="gongneng1">
+								<a href="index">
+									<span class="iconfont icon-jia"></span>
+								</a>
+							</div>
+							<div class="seText">
+								<spam></spam>
+							</div>
+							<div class="gongneng1">
+								<a href="#">
+									<span></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="uploaduser">
+		<img src="./images/upload/user4.jpg">
+	</div>
+	<div class="uploadtext">
+		<span>分享的人是厨房里的天使</span>
+	</div>
+	<div class="uploadcont" id="foot">
+		<div class="row marpad">
+			<!-- 左边蓝色块 -->
+			<div class="col-xs-5 marpad leftcont" @click="jimp_html('setupfood1')">
+				<div class="lefttop"><span class="iconfont icon-weibiaoti1"></span></div>
+				<div class="leftmain"></div>
+				<div class="leftbottom"></div>
+			</div>
+			<div class="col-xs-2"></div>
+			<!-- 右边黄色块 -->
+			<div class="col-xs-5 rightcont" style="padding-top:15px;">
+				<div class="righttop"><span class="iconfont icon-weibiaoti1"></span></div>
+				<div class="rightmain"></div>
+				<div class="rightbottom"></div>
+			</div>
+		</div>
+	</div>
+	<div class="uploadfood">
+		<div class="row marpad">
+			<div class="col-xs-5 foodtext">创建菜谱</div>
+			<div class="col-xs-2"></div>
+			<div class="col-xs-5 foodtext">上传作品</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        let foot=new Vue({
+            el:'#foot',
+            methods:{
+                jimp_html:function(message){
+                    location=message;
+                },
+            }
+        })
+    })
+</script>
+</html>

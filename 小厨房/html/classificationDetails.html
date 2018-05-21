@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>分类详情</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./bootscss/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootscss/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/classificationDetails.css">
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/vue.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/classificationDetails.js"></script>
+</head>
+<body>
+    <header id="Top" class="navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row box2">
+                <i class="glyphicon glyphicon-menu-left" @click="jimp_html('index.html')"></i>
+                <i class="iconfont icon-tanxintanhua"></i>
+                <i class="iconfont icon-pengyouquan"></i>
+                <i class="iconfont icon-diandiandian"></i>
+                <i class="iconfont icon-add_note pull-right"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--中间主体内容-->
+    <div class="main" id="Main">
+        <div class="container-fluid">
+            <div class="row">
+                <!--左边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+
+                <!--中间内容 模板循环-->
+                <div class="col-sm-8 col-xs-12 box1">
+                    <div>
+                        <p>超过1000人做过的家常菜</p>
+                        <p>来自:下厨房</p>
+                        <!--<p class="text-left">大家说好才是真的好</p>-->
+                    </div>
+<!--:src="x.food_img"-->
+                    <!--模板循环-->
+                    <div class="box1_1" v-for="x in list">
+                        <div class="box1_1_1">
+                            <img :src="x.food_img" alt="..." class="img1"  @click="jimp_html('menuDetails.html')">
+                            <p class="text-left p1" @click="jimp_html('menuDetails.html')">{{x.food_name}}</p>
+                            <p class="text-left p2">
+                                <span>{{x.food_score}}</span>
+                                <span>{{x.food_peopel}}个人做过</span>
+                            </p>
+                            <img :src="x.user_img" alt="..." class="img-circle img2" >
+                            <span class="sp1">{{x.user_name}}</span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--右边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--<footer class="navbar-fixed-bottom">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-4 col-xs-4 text-center box3 box3_1">-->
+                    <!--<i class="iconfont icon-kongxinaixin"></i>-->
+                    <!--<a href="#">收藏</a>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 col-xs-4 text-center box3">-->
+                    <!--<i class="iconfont icon-add_note"></i>-->
+                    <!--<a href="addMenu.html">加菜单</a>-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 col-xs-4 text-center box3">-->
+                    <!--<i class="iconfont icon-xiangji"></i>-->
+                    <!--<a href="#">传作品</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</footer>-->
+
+</body>
+</html>

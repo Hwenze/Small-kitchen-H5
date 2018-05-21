@@ -1,0 +1,114 @@
+*,.marpad{
+	padding: 0;
+	margin: 0;
+}
+input,textarea{
+	outline:none;	
+}
+/*相对手机顶部定位*/
+#signinbg{
+	position: relative;
+}
+/*注册页面背景图片*/
+.register_bg{
+	background: url(../images/register/register_bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+/*顶部箭头*/
+.regtop{
+	padding: 5px 0;
+	background: rgba(255,255,255,.5);
+}
+.icontext:hover{
+	text-decoration:none;
+}
+.icontext span{
+	font-size: 2rem;
+	color: #000;
+}
+/*logo*/
+.registerlog{
+	position: absolute;
+	top: 10%;
+	left:50%;
+	margin-left:-60px;
+}
+/*注册页面主体*/
+.regisiecent{
+	width: 90%;
+	height: 50%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -45%;
+	border-radius: 10px;
+	background: rgba(255,255,255,.5);
+}
+.minbox{
+	height: 4rem;
+	line-height: 4rem;
+}
+.minbox input{
+	color: #000;
+	border: 0;
+	background: rgba(255,255,255,.0);
+}
+.butbox input{
+	width: 50%;
+	height: 3.7rem;
+	font-size: 1.5rem;
+	line-height: 4rem;
+	color: #000;
+	border: 0;
+	background: rgba(255,255,255,.5);
+}
+.leftbut{
+	float: left;
+	border-bottom-left-radius: 10px;
+}
+.rightbut{
+	float: left;
+	border-bottom-right-radius: 10px;
+}
+/*对号和错号*/
+/*.proname img{
+	width: 2rem;
+}*/
+/*文本输入框颜色：黑色*/
+input::-webkit-input-placeholder{
+    color:#000;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#000;
+}
+ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#000;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#000;
+}
+@media screen and (min-height: 667px) {
+	.register_bg{
+		background-size: 120% 100%;
+	} 
+}
+@media screen and (min-height: 568px) {
+	.regisiecent{
+		height: 50%;
+	}
+}
+@media screen and (min-height: 600px) {
+	.regisiecent{
+		height: 43%;
+	}
+}
+@media screen and (min-height: 700px) {
+	.regisiecent{
+		height: 39%;
+	}
+}
+@media screen and (min-height: 800px) {
+	.regisiecent{
+		height: 35%;
+	}
+}

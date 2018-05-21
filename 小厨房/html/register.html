@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>注册</title>
+	<link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/register.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>
+</head>
+<body>
+	<div id="registerbg" class="container-fluid register_bg">
+		<!-- 顶部 -->
+		<div class="row">
+			<div class="col-xs-12 regtop">
+				<div class="col-xs-2 text-center"><a class="icontext" href="./signin"><span class="iconfont icon-zuojiantou"></span></a></div>
+			</div>
+		</div>
+		<!-- logo -->
+		<div class="registerlog">
+				<img src="./images/signin/logo.png">
+		</div>
+		<!-- 注册页主体 -->
+		<div class="regisiecent">
+			<form action="" method="post">
+				<div class="row">
+					<!-- 用户名昵称 -->
+					<div class="col-xs-12 minbox">
+						<div class="col-xs-4"><span>昵称:</span></div>
+						<div class="col-xs-5"><input id="username" type="text" name="username" placeholder="请输入昵称"></div>
+						<div class="col-xs-3 proname"></div>
+					</div>
+					<!-- 用户密码 -->
+					<div class="col-xs-12 minbox">
+						<div class="col-xs-4"><span>密码:</span></div>
+						<div class="col-xs-5"><input id="fistpow" type="password" name="" placeholder="密码不可少于6位"></div>
+						<div class="col-xs-3 propow"></div>
+					</div>
+					<!-- 确认密码 -->
+					<div class="col-xs-12 minbox">
+						<div class="col-xs-4"><span>确认密码:</span></div>
+						<div class="col-xs-5"><input id="nextpow" type="password" name="userpow" placeholder="再次输入密码"></div>
+						<div class="col-xs-3 propow2"></div>
+					</div>
+					<!-- 用户手机 -->
+					<div class="col-xs-12 minbox">
+						<div class="col-xs-4"><span>手机号码:</span></div>
+						<div class="col-xs-5"><input id="pho" type="tel" name="userpho" placeholder="中国大陆11位手机号码"></div>
+						<div class="col-xs-3 protel"></div>
+					</div>
+					<!-- 用户邮箱 -->
+					<div class="col-xs-12 minbox">
+						<div class="col-xs-4"><span>邮箱:</span></div>
+						<div class="col-xs-5"><input id="email" type="email" name="useremail" placeholder="邮箱"></div>
+						<div class="col-xs-3 proema"></div>
+					</div>
+					<!-- 提交按钮 -->
+					<div class="col-xs-12 butbox">
+						<input class="leftbut"  id="butoff" type="button" name="" value="取消">
+						<input class="rightbut" id="buton" type="submit" name="" value="注册">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>支付成功</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="./css/paySuccess.css">
+    <script src="js/vue.min.js.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<header>
+    <div>
+        <a href="firmOrder.html">
+            <img src="images/xiangzuo1.png" alt="">
+        </a>
+    </div>
+    <div>支付成功</div>
+    <div>
+        <!--<span>编辑</span>-->
+    </div>
+</header>
+<div class="prompt">
+    <span class="icon">✔</span>
+    <span>付款成功</span>
+</div>
+<div class="hint">您的包裹已经准备出库，等待飞往北京市</div>
+<div class="consignee_info">
+    <p>
+        <p class="recipients">收件人:</p>
+        <p class="address_text">
+            <span>蕨菜小姐</span>
+            <span>193****1175</span>
+        </p>
+    </p>
+    <p>
+        <p class="recipients">收件地址:</p>
+        <p class="address_text">
+            <span>广东省</span>
+            <span>深圳市</span>
+            <span>罗湖区</span>
+            <span>东门街xx号xx街xx单元201</span>
+        </p>
+    </p>
+</div>
+<footer>
+    <a href="firmOrder.html">
+        <div class="left_btn btn">我的订单</div>
+    </a>
+    <div id="foot" class="right_btn btn"><a href="myCenter" style="color: #f5574e">返回市集</a></div>
+</footer>
+</body>
+
+<!-- <script type="text/javascript">
+    $(function(){
+    //底部页面跳转
+    let foot=new Vue({
+        el:'#foot',
+        methods:{
+            jimp_html:function(message){
+                location=message;
+            },
+        }
+    })
+    });
+</script> -->
+
+</html>

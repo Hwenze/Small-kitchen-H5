@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一键全购</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="./css/wholeBuy.css">
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="./js/wholeBuy.js"></script>
+</head>
+<body>
+<div id="myApp">
+    <header>
+        <div>
+            <a href="basket">
+                <img src="images/xiangzuo1.png" alt="">
+            </a>
+        </div>
+        <div>一键买齐懒人版糖醋排骨</div>
+        <div>
+            <a href="shoppingCart">
+                <img src="images/gouwuche.png" alt="">
+            </a>
+        </div>
+    </header>
+    <div class="area">所在地区 <span>北京市</span></div>
+    <div class="pic">
+        <img src="images/img771609191aaf8_03.jpg" alt="">
+    </div>
+    <div class="favourable">
+        <div class="favourable_list">
+            <div class="favourable_left">
+                <p class="money">10.00</p>
+                <p>满99.00可用</p>
+            </div>
+            <div class="favourable_right">领取</div>
+        </div>
+        <div class="favourable_list">
+            <div class="favourable_left">
+                <p class="money">10.00</p>
+                <p>满99.00可用</p>
+            </div>
+            <div class="favourable_right">领取</div>
+        </div>
+        <div class="favourable_list">
+            <div class="favourable_left">
+                <p class="money">10.00</p>
+                <p>满99.00可用</p>
+            </div>
+            <div class="favourable_right">领取</div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="list" v-for="(x,index) in goods">
+            <div class="list_title">猪肋排/500g</div>
+            <div class="goods">
+                <div class="goods_img">
+                    <img :src="x.com_img" alt="">
+                </div>
+                <div class="goods_describe">
+                    <p class="goods_describe_text">{{x.com_name}}</p>
+                    <p class="goods_money">￥{{x.com_price}}</p>
+                </div>
+                <div class="goods_operation">
+                    <ul>
+                        <li class="goods_add" @click='delgoods_cart(index)'  v-show="x.com_number"><span >-</span></li>
+                        <li style="padding: 0 .5rem;"><span v-show="x.com_number">{{x.com_number}}</span></li>
+                        <li class="goods_add" style="position: absolute;right: 1rem;" @click="addgoods_cart(index)"><span>+</span></li>
+                    </ul>
+                </div>
+            </div>
+            <transition name="slide-fade">
+                <div v-if="x.state=0|x.state">
+                    <div class="goods">
+                        <div class="goods_img">
+                            <img src="images/4.png" alt="">
+                        </div>
+                        <div class="goods_describe">
+                            <p class="goods_describe_text">{{x.com_name}}</p>
+                            <p class="goods_money">￥{{x.com_price}}</p>
+                        </div>
+                        <!--<div class="goods_add" @click="addgoods_cart(index)">+</div>-->
+                        <div class="goods_operation">
+                            <ul>
+                                <li class="goods_add" @click="delgoods_cart(index)" ><span>-</span></li>
+                                <li style="padding: 0 .5rem;"><span v-show="x.com_number">{{x.com_number}}</span></li>
+                                <li class="goods_add" style="position: absolute;right: 1rem;" @click="addgoods_cart(index)"><span>+</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="goods">
+                        <div class="goods_img">
+                            <img src="images/4.png" alt="">
+                        </div>
+                        <div class="goods_describe">
+                            <p class="goods_describe_text">{{x.com_name}}</p>
+                            <p class="goods_money">￥{{x.com_price}}</p>
+                        </div>
+                        <!--<div class="goods_add" @click="addgoods_cart(index)">+</div>-->
+                        <div class="goods_operation">
+                            <ul>
+                                <!--<li class="goods_add" @click="delgoods_cart(index)" v-show="x.com_number"><span>-</span></li>-->
+                                <!--<li style="padding: 0 .5rem;"><span v-show="x.com_number">{{x.com_number}}</span></li>-->
+                                <li class="goods_add" style="position: absolute;right: 1rem;" @click="addgoods_cart(index)"><span>+</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </transition>
+            <div class="other" @click="fun(index)">{{x.status}}</div>
+        </div>
+        <div class="additional">
+            <div class="list_title">您还需另备以下食材:</div>
+            <div class="list_text">冰糖/3勺（45ml）、白醋/4勺（60ml）、八角/1个</div>
+        </div>
+    </div>
+    <footer>
+        <div class="price">￥{{wholeMoney}}</div>
+        <form method="get" action="">
+            <a href="shoppingCart"><input type="button"  class="balance" value="结算" @click="balance()"/></a>
+        </form>
+    </footer>
+</div>
+
+
+</body>
+</html>

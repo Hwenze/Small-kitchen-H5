@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分类列表</title>
+	<link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- 加载Boots核心样式 -->
+	<link rel="stylesheet" href="./bootscss/bootstrap.min.css">
+	<!-- 加载Boots（主题文件）可以不引入 -->
+	<link rel="stylesheet" href="./bootscss/bootstrap-theme.min.css" />
+	<!-- 加载独立CSS文件 -->
+	<link rel="stylesheet" href="./css/search.css">
+	<!-- 加载vue.js文件 -->
+	<script src="./js/vue.min.js"></script>
+	<!-- 加载JQ -->
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="./js/bootstrap.min.js"></script>
+	<!-- 加载js -->
+	<script src="./js/search.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<header id="Top">
+	<div class="nav navbar-fixed-top">
+		<div class="nav_left" @click="jimp_html('foodclassify')">
+			<div class="glyphicon glyphicon-chevron-left"></div>
+		</div>
+		<div class="nav_center">
+			<input id="put1" type="text" value="家常菜" onfocus="if (value =='家常菜'){value =''}" onblur="if (value ==''){value='家常菜'}">
+		</div>
+		<div class="nav_right" @click="go_righ()">
+			<div class="glyphicon glyphicon-align-center"></div>
+		</div>
+		<xuanzhe></xuanzhe>
+	</div>
+</header>
+<!-- 主体 -->
+<main id="myapp">
+	<!-- <div class="nav_list">
+        <ul>
+            <li><p>智能排序</p></li>
+            <li>评分最高</li>
+            <li>做过最多</li>
+        </ul>
+    </div> -->
+	<div class="nav_class">
+		<div  class="demo">
+			<div class="demo_new"
+				 v-for="tab in tabs"
+				 :key="tab"
+				 :class="['tab-button', { active: currentTab === tab }]"
+				 @click="currentTab = tab"
+			>{{ tab }}</div>
+		</div>
+		<!-- <component v-bind:is="currentTabComponent" class="tab"></component> -->
+	</div>
+
+	<div class="gg">
+		<div class="gg_left">
+			<img src="./img/gg.jpg">
+		</div>
+		<div class="gg_center">
+			<p>圣诞季美食狂欢，双旦6折起嗨吃！</p>
+			<span class="sm">广告</span>
+		</div>
+		<div class="gg_right">
+			<span class="dj">点击</span>
+		</div>
+	</div>
+	<div class="shuju">
+			<p class="h4">没有搜索到需要的数据</p>
+	</div>
+	<hr>
+
+</main>
+<!-- 底部 -->
+<footer></footer>
+</body>
+</html>

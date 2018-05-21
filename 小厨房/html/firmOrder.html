@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 62.5%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>确认订单</title>
+    <link rel="stylesheet" href="./css/firmOrder.css">
+     <script src="js/vue.minjs"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="./js/firmOrder.js"></script>
+</head>
+<body>
+    <div id="mimacuowu">
+        <p>密码错误</p>
+        <button class='yes'>确定</button>
+    </div>
+<div id="myApp">
+<header>
+    <div>
+        <a href="shoppingCart.html">
+            <img src="images/xiangzuo1.png" alt="">
+        </a>
+    </div>
+    <div>确认订单</div>
+    <div>
+        <!--<span>编辑</span>-->
+    </div>
+</header>
+<div class="address">
+    <div class="address_main">
+        <div class="address_info">
+            <p class="address_name">蕨菜姐姐</p>
+            <p class="address_tel">183****1175</p>
+        </div>
+        <div class="address_text">
+            <span>广东省</span>
+            <span>深圳市</span>
+            <span>罗湖区</span>
+            <span>东门街xx号xx街xx单元201</span>
+        </div>
+    </div>
+    <div class="address_next">
+        <span>></span>
+    </div>
+</div>
+<div class="main">
+    <div class="main_info">
+        <ul>
+            <li><img src="images/dianpu.png" alt=""></li>
+            <li>味BACK</li>
+        </ul>
+    </div>
+    <div style="background: white">
+        <div class="main_goods bottom_hr" v-for="x in goods_cart">
+            <div class="main_goods_img">
+                <img :src="x.com_img" alt="">
+            </div>
+            <div class="main_goods_text">
+                <!--<p style="height: 3.2rem;overflow: hidden">监考老师大黄据当时复活甲空间还是自动分解原味核桃250g</p>-->
+                <p style="height: 3.2rem;overflow: hidden">{{x.com_name}}</p>
+                <p style="margin-top: 10%;">一斤袋装</p>
+            </div>
+            <div>
+                <p>￥{{x.com_price}}</p>
+                <p style="text-align: right;font-size: 1rem;color: #999;">X{{x.com_number}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: white;">
+        <div class="transport_info bottom_hr">
+            <div class="freight">运费:</div>
+            <div class="postage" style="color: #999">包邮</div>
+        </div>
+        <div class="transport_info bottom_hr">
+            <div class="freight">合计:</div>
+            <div class="postage">￥{{all_price}}</div>
+        </div>
+    </div>
+
+    <div class="main_input">
+        <input type="text" placeholder="写留言"/>
+    </div>
+    <div class="favourable">
+        <div class="favourable_left">
+            <ul>
+                <li><img src="images/youhuijuan.png" alt=""></li>
+                <li>优惠</li>
+                <li class="favourable_left_btn">无可用</li>
+            </ul>
+        </div>
+        <div class="favourable_right">
+            <span>未使用</span>
+            <span>></span>
+        </div>
+    </div>
+    <div class="payment">支付方式</div>
+    <div style="background: white">
+        <div class="payment_list bottom_hr">
+            <div class="payment_list_left">
+                <ul>
+                    <li class="payment_list_icon">
+                        <img src="images/5453808b3761fb1218c2b179924e6df0.jpg" alt="">
+                    </li>
+                    <li>
+                        <p>支付宝</p>
+                        <p style="font-size: 1rem">推荐</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="payment_list_right">
+                <div class="radio">
+                    <input type="radio" name="zhifu" checked>
+                    <!--<img src="images/gou.png" alt="">-->
+                </div>
+            </div>
+        </div>
+        <div class="payment_list">
+            <div class="payment_list_left">
+                <ul>
+                    <li class="payment_list_icon">
+                        <img src="images/5d1316be89ccbdc0ed51fb156c3e8500.jpg" alt="">
+                    </li>
+                    <li>
+                        <p>微信</p>
+                        <p style="font-size: 1rem">推荐</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="payment_list_right">
+                <div class="radio">
+                    <input type="radio" name="zhifu">
+                    <!--<img src="images/gou.png" alt="">-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <span>实付款:</span>
+    <span>￥{{all_price}}</span>
+    <a href="#"><span class="footer_btn" @click="show=true">付款</span></a>
+</footer>
+<box v-show="show" id="box"></box>
+    <div class="mongban" v-show="show" @click="show=false"></div>
+</div>
+
+</body>
+</html>

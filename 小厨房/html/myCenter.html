@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <!--加载bootstrap框架-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--加载自定义公用样式-->
+    <link rel="stylesheet" href="css/css.css">
+    <!--加载阿里云图标库-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+    <!--加载显示成的样式-->
+    <link rel="stylesheet" href="css/myCenter.css">
+    <!--加载vue框架库-->
+    <script src="js/vue.min.js"></script>
+    <!--加载vue公共主键-->
+    <script src="commen/commen.js"></script>
+    <!--加载jquery库-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!--<script src="js/indexvue.js"></script>-->
+    <script src="js/myCenter.js"></script>
+
+    <!--加载bootstrap插件-->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+<div id="Top">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default top_hei navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="top_box">
+                        <div class="gongneng1" @click="jimp_html('upload')">
+                            <a href="#">
+                                <span class="iconfont icon-jia"></span>
+                            </a>
+
+                        </div>
+                        <div class="seText">
+                            <!-- <input type="text" placeholder="搜索我的收藏"> -->
+                            <p>我</p>
+                        </div>
+                        <div class="gongneng1">
+                            <a href="#">
+                                <span class="iconfont icon-unie612" @click="jimp_html('addChefs')"></span>
+                            </a>
+                            &nbsp;
+                            <a href="#">
+                                <span @click="tuichu()" class="glyphicon glyphicon-off" style="font-size: 1.2em;"></span>
+                            </a>
+                            <outuser></outuser>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 中间 -->
+<div id="miam">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="my_user">
+                <div class="my_data">
+                    <div class="user_smallbox">
+                        <h3 class="user_name"><%= username %></h3>
+                        <p>
+                            <span class="user_sex"><%= sex%></span>
+                            <span class="yese">2018年加入</span>
+                        </p>
+                    </div>
+                    <div class="user_pic">
+                        <img src="<%= pic %>" alt="头像"/>
+                    </div>
+                </div>
+                <div class="popularity">
+                    <div class="follow_fans">
+                        <div class="follow">
+                            <p><%= follow %></p>
+                            <p>关注</p>
+                        </div>
+                        <div class="fans">
+                            <p><%= fans %></p>
+                            <p>粉丝</p>
+                        </div>
+                    </div>
+                    <div class="gerenzhiliao">
+                        <p>
+                            <a href="#">编辑个人资料</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--统计数据盒子-->
+        <div class="row">
+            <div class="nav_menu">
+                <div class="nav_center">
+                    <div>
+                        <span class="iconfont icon-aixin"></span>
+                        <p>我的收藏</p>
+                    </div>
+                    <div>
+                        <span class="iconfont icon-youhuiquan"></span>
+                        <p>菜谱</p>
+                    </div>
+                    <div>
+                        <span class="iconfont icon-1"></span>
+                        <p>优惠</p>
+                    </div>
+                    <div>
+                        <span class="iconfont icon-zhexiantu"></span>
+                        <p>统计</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="nav_class" id="dynamic-component-demo">
+                <div  class="demo">
+                    <div class="demo_new"
+                         v-for="tab in tabs"
+                         :key="tab"
+                         :class="['tab-button', { active: currentTab === tab }]"
+                         @click="currentTab = tab"
+                    >{{ tab }}</div>
+                </div>
+                <component v-bind:is="currentTabComponent" class="tab"></component>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<footer>
+    <nav class="navbar navbar-default navbar-fixed-bottom" id="foot">
+        <foot_box :data="list" :active="active"></foot_box>
+        <script type="text/javascript">
+            let foot=new Vue({
+                el:'#foot',
+                data:{
+                    list:[
+                        {text:'小厨房',tubiao:'icon-home',html:'index'},
+                        {text:'市集',tubiao:'icon-shichang',html:'fair'},
+                        {text:'收藏',tubiao:'icon-aixin',html:'collection'},
+                        {text:'信箱',tubiao:'icon-xinfeng-kai',html:'mailbox'},
+                        {text:'我',tubiao:'icon-weibiaoti-_huabanfuben',html:'myCenter'},
+                    ],
+                    active:4,
+                },
+            })
+        </script>
+    </nav>
+</footer>
+</body>
+</html>

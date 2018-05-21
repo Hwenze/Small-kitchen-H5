@@ -1,0 +1,178 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/************头部********************/
+.nav{
+	width: 100%;
+	height: 3em;
+	/*border-bottom:.05em solid  #9E9E9E;*/
+	background: #fff;
+}
+.nav_left{
+	width: 10%;
+	height: 3em;
+	float: left;
+	text-align: center;
+}
+.glyphicon-chevron-left{
+	color: black;
+	font-size: 1.3em;
+	margin-top:.6em; 
+}
+.nav_center{
+	width: 80%;
+	height: 3em;
+	float: left;
+	text-align: center;
+}
+.nav_center input{
+	background:#F5F5F5 url(../img/search_btn.png)no-repeat .2em; 
+	background-size:1.3em;
+	margin-top:.4em; 
+	border: 0px;
+	outline:none;
+	color:#8E8E8E;
+	width: 18em;
+	height: 2em;
+	text-indent: 2em;
+}
+.nav_right{
+	width: 10%;
+	height: 3em;
+	float: left;
+	text-align: center;
+}
+.glyphicon-option-horizontal{
+	color: black;
+	font-size: 1.3em;
+	margin-top:.5em; 
+}
+/***********主体***************/
+main{
+	margin-top:3em; 
+}
+.jj{
+	width: 100%;
+	margin-top: .5em;
+}
+.xx_left{
+	width: 33%;
+	margin-left: 5%;
+	float: left;
+}
+.xx_left p{
+	font-size: 1.3em;
+	margin-bottom: 2em;
+}
+.xx_left span{
+	display: block;
+	color: #5D5D5D;
+	font-size: .7em;
+}
+.sz{
+	width: 100%;
+	margin-top:1.2em;
+}
+.gzd{
+	width: 35%;
+	float: left;
+}
+.gzd span{
+	font-size: .8em;
+}
+.fs{
+	width: 35%;
+	float: right;
+}
+.fs span{
+	font-size: .8em;
+}
+.xx_right{
+	width: 33%;
+	float: right;
+}
+.tx{
+	width: 100%;
+	height:4.5em;
+}
+.tx img{
+	width:4.5em;
+	height:4.5em;
+	border-radius:50%;
+	overflow:hidden;
+	float: right;
+	margin-right:2em;
+}
+.gz{
+	width: 4.5em;
+	height: 2em;
+	background: #FF5733;
+	margin-left:2.3em;
+}
+.gz p{
+	font-size: .92em;
+	line-height: 2em;
+	color: #fff;
+	margin-top: 3em;
+	text-align: center;
+	display: block;
+}
+
+/*.zp{
+	width: 100%;
+	margin-top: 15em;
+}
+.zp ul li{
+	width: 50%;
+	height: 2em;
+	float: left;
+	text-align: center;
+	list-style-type: none;
+}
+.zp ul li:last-of-type{
+	border-bottom: 2px solid #FF5733;
+}*/
+.nav_class{
+    margin-top: 15em;
+    width: 100%;
+}
+.nav_class>.demo{
+    display: flex;
+    width: 100%;
+}
+.nav_class>.demo>.demo_new{
+    width: 50%;
+    text-align: center;
+}
+.demo_new{
+    padding-bottom: .5em;
+}
+.tab-button:hover {
+    color: red;
+   	border-bottom: 2px solid #FF5733;
+}
+.tab-button.active {
+    color: red;
+    border-bottom: 2px solid #FF5733;
+}
+
+.pic{
+	width: 100%;
+    margin-top: -.7em;
+}
+.pic ul li{
+	width: 33.3%;
+	height: 6.1em;
+	float: left;
+}
+.pic ul li img{
+	width: 100%;
+	height: 6em;
+}
+
+html {
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px;}

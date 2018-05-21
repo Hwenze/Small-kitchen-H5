@@ -1,0 +1,156 @@
+@charset "UTF-8";
+#myApp{
+    overflow-y: scroll;
+    position: relative;
+}
+#myApp::-webkit-scrollbar{
+    display:none;
+}
+#miam{
+    margin-bottom: 4em;
+}
+.weekly_Box{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.weekly_Box .weekly_pic{
+    width: 48%;
+    background: #bbfff1;
+    position: relative;
+}
+.weekly_Box .weekly_pic img{
+    width: 100%;
+}
+.weekly_Box .weekly_pic div{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background:rgba(0,0,0,.2);
+}
+.weekly_Box .weekly_pic div a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-indent: 1em;
+}
+.today{
+    margin-top: 1em;
+}
+.carousel-indicators{
+    bottom: 0;
+}
+.carousel-indicators li{
+    background: #ccc;
+}
+.carousel-indicators .active{
+    background-color:#000000 ;
+}
+.banner_box{
+    margin-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    overflow: hidden;
+    width: 100%;
+}
+.banner_box img{
+    width: 100%;
+}
+.banner_box p{
+    height: 2em;
+    line-height: 2em;
+    font-size: .5em;
+    padding-top: .5em;
+}
+.banner_box p button{
+    width: 20%;
+    border: none;
+    background: #d4d4d4;
+    border-radius:.2em ;
+    outline:none;
+    float: right;
+}
+.title_lable{
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+}
+.title_lable>.title_box>label{
+    font-size:1.2em;
+}
+.title_lable>.title_box>a{
+    font-size: .5em;
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+}
+.shicai{
+    margin: 0 auto;
+    width: 90%;
+    overflow-x: scroll;
+    /*-ms-overflow-xstyle:none;*/
+    /*!*火狐下隐藏滚动条*!*/
+    /*overflow:-moz-scrollbars-none;*/
+}
+.shicai::-webkit-scrollbar{
+    display:none;
+}
+.shicai>.touch{
+    width:56em;
+}
+
+.shicai>.touch>.studio_box{
+    float: left;
+    margin-right: 1em;
+    width: 20%;
+}
+.studio_box p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.shicai>.touch>.studio_box>span{
+    display: block;
+    margin-top: -1em;
+    color: #d4d4d4;
+    font-size: .5em;
+}
+.shicai>.touch>.studio_box>.studio_class{
+    border-radius: .5em;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.shicai>.touch>.studio_box>.studio_class>img{
+    width: 100%;
+}
+
+.shicai>.touch>.studio_box>.studio_class>div{
+
+    position: absolute;
+    background: rgba(0,0,0,.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*height: 10em;*/
+}
+.shicai>.touch>.studio_box>.studio_class>div a{
+    color: #fff;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-top: 70%;
+    margin-left: 1em;
+
+}
+.shicai>.touch>.studio_box>.studio_class>div p{
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 1em;
+}

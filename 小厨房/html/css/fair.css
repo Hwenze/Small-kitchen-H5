@@ -1,0 +1,248 @@
+#miam{
+    padding-bottom: 4em;
+}
+.newpepro{
+    width: 100%;
+    margin: 0 auto;
+    background: #fbfbf1;
+    height: 13em;
+    text-align: center;
+}
+.newpepro h2{
+    color:#df3d37;
+    text-align: center;
+    padding-top: .2em;
+    background: no-repeat;
+}
+.newGift{
+    width: 50%;
+    background: #df3d37;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    height: 2em;
+    line-height: 2em;
+}
+.newGift span{
+    display: inline-block;
+    margin:0 auto ;
+
+}
+.newGift span::before{
+    content: '·';
+}
+.newGift span::after{
+    content: '·';
+}
+.newpepro a{
+    /*text-align: right;*/
+    color: #df3d37;
+    font-size: 1.2em;
+    font-weight: 700;
+ }
+.newpepro p{
+    text-align: center;
+    color: #df3d37;
+    font-size: 1em;
+    height: 2em;
+    line-height: 2em;
+    margin: 0;
+}
+.newpepro p span::before{
+    content: '●';
+    margin-left: 1em;
+}
+.new_fair{
+    width: 90%;
+    margin: 0 auto;
+}
+.wuping{
+    width: 100%;
+    overflow-x: scroll;
+}
+.wuping::-webkit-scrollbar{
+    display: none;
+}
+.log_wupin{
+    width: 40em;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    margin-top: 1em;
+}
+.title span{
+    font-size: .8em;
+    color: #999999;
+}
+.title>.text1{
+    padding: 0;
+    margin: 0;
+}
+.title>.text1>span{
+    color: black;
+    font-size: 1.2em;
+}
+.title .text1 a{
+    font-size: 1em;
+    float: right;
+}
+.foot_box{
+    width: 25%;
+    margin-right: 1em;
+}
+.foot_box>.pic_foot{
+    border-radius: .5em;
+    overflow:hidden ;
+    position: relative;
+}
+.foot_box>.pic_foot img{
+    width: 100%;
+}
+.foot_box>.pic_foot div{
+    position: absolute;
+    background: rgba(255,213,59,.8);
+    color: #000;
+    width: 2em;
+    border-radius:0.1em;
+    top:1em;
+    left: 1em;
+    overflow: hidden;
+}
+.foot_box>p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -moz-box-orient: vertical;
+    -moz-line-clamp: 1;
+    -o-box-orient: vertical;
+    -o-line-clamp: 1;
+    -ms-box-orient: vertical;
+    -ms-line-clamp: 1;
+    overflow: hidden;
+    font-size: .5em;
+    margin: 0;
+    padding: 0;
+}
+.foot_box>.goods_name{
+    margin-top: .5em;
+    font-weight: 700;
+    color: #000;
+}
+.foot_box>.introduce{
+    color: #333;
+}
+.foot_box>.sign>span{
+    color: red;
+}
+.foot_box>.sign>del{
+    color: #999999;
+}
+.foot_box>.sign>i{
+    color: #999999;
+    float: right;
+}
+.foot_recommend{
+    width: 90%;
+    position: relative;
+    margin: 1em auto;
+}
+.foot_recommend>.foot_recommend1{
+    position: relative;
+    margin-bottom: 1em;
+}
+.foot_recommend>.foot_recommend1>img{
+    width: 100%;
+}
+.foot_recommend>.foot_recommend1>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    top: 0;
+}
+.foot_recommend>.foot_recommend1>div>p{
+    width: 80%;
+    margin: 35% auto 0;
+}
+.foot_recommend>.foot_recommend1>div>p>a{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #fff;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    /*white-space: nowrap;*/
+    width: 100%;
+    display: inline-block;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.foot_recommend>.foot_recommend1>div >span{
+    display:block;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    font-size: .5em;
+}
+/*   <!--猜你喜欢-->*/
+.like_you{
+    width: 90%;
+    margin: 0 auto;
+}
+.like_you>.guess_youlike{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.like_you>.guess_youlike>.guess_box{
+    width: 48%;
+    margin-top:.5em ;
+}
+.like_you>.guess_youlike>.guess_box>div>img{
+    width: 100%;
+}
+.like_you>.guess_youlike>.guess_box>p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    font-size: .5em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.like_you>.guess_youlike>.guess_box>p>a{
+    color: #333;
+}
+.like_you>.guess_youlike>.guess_box>span{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+    font-size: .5em;
+    margin: 0;
+    padding: 0;
+}
+.like_you>.guess_youlike>.guess_box>span>a{
+    color: #999;
+}
+.goods_money{
+    margin-top: .3em;
+}
+.goods_money>.money{
+    color: red;
+}
+.goods_money>.sales_volume{
+    float: right;
+    font-size: .8em;
+}
+.bottom_end{
+    margin: 0 auto;
+    padding: 0;
+    font-size: .2em;
+    color: #d4d4d4;
+    text-align: center;
+}

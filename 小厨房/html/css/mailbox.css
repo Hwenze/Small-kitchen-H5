@@ -1,0 +1,50 @@
+.who_mail{
+    margin: 0 auto;
+    width: 90%;
+}
+.who_user{
+    width: 100%;
+    display: flex;
+    justify-items: baseline;
+    padding-bottom:.5em ;
+    border-bottom: .1em solid #efefef;
+    padding: .5em;
+}
+.who_user>div{
+    margin-right: 3%;
+}
+.who_user>.user_portrait{
+    width: 20%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.who_user>.user_portrait>img{
+    width: 100%;
+}
+.who_user>.centen_box{
+    width: 75%;
+}
+.centen_box>p{
+    margin: .2em auto 0 auto;
+}
+.centen_box>p>label{
+
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.centen_box>p>span{
+    float: right;
+    color: #c4c4c4;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.centen_box>.xiaoxi{
+    font-size: .8em;
+    color: #555;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

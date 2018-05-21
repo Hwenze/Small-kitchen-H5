@@ -1,0 +1,99 @@
+.nav_class{
+    width: 100%;
+}
+.nav_class>.demo{
+    display: flex;
+    justify-content: space-between;
+}
+.nav_class>.demo>.demo_new{
+    text-align: center;
+    width: 40%;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.tab-button:hover {
+    /*color:#df514a ;*/
+    border-bottom:1px solid #df514a ;
+}
+.tab-button.active {
+    /*color:#df514a ;*/
+    border-bottom:1px solid #df514a ;
+}
+.tab{
+    width: 90%;
+    margin: 0 auto;
+}
+.tab>.list{
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    margin-top: 1em;
+}
+.tab>.list>div{
+    margin-right: 1%;
+}
+.list_pic{
+    width: 45%;
+}
+.list_pic>a>img{
+    width: 100%;
+}
+.list_main{
+    width: 45%;
+}
+.list_main>h4{
+    padding: .5em auto .5em auto;
+    font-size: 1.2em;
+    color: #333;
+}
+.list_main>h4{
+    padding: .5em auto .5em auto;
+    font-size: 1.2em;
+    color: #333;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.list_main>.small_lable{
+    font-size: .8em;
+    color: #999999;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.list_main>.list_sd{
+    height: 2em;
+    line-height: 2em;
+}
+.list_main>.list_sd>.list_score{
+    font-size: .8em;
+    color: #333;
+}
+.list_main>.list_sd>.list_do{
+     font-size: .8em;
+     color: #333;
+    float: right;
+ }
+.list_share{
+    width: 8%;
+    display: flex;
+}
+.list_share>button{
+    background: none;
+    color: #333;
+    border:none ;
+    font-size: 1.5em;
+    outline:none;
+}
+.list_share>div>.del_box{
+    background: #ff3c42;
+    color: #fff;
+    border: none;
+    outline:none;
+}
+.list_share>div>.cancel{
+    background: #ccc;
+    color: #fff;
+    border: none;
+    outline:none;
+}

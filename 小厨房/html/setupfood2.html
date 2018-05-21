@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>创建菜谱</title>
+	<link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-switch.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/setupfood2.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+	<script type="text/javascript" src="./js/setupfood2.js"></script>
+</head>
+<body>
+	<div id="setupfood2" class="container">
+		<form>
+			<div class="row marpad">
+				<div class="col-xs-12 marpad" style="padding-top:10px;">
+					<div class="col-xs-3 text-left top_left" @click="jimp_html('setupfood1')">关闭</div>
+					<div class="col-xs-6 text-center top-cent">加入菜谱</div>
+					<div class="col-xs-3 text-right top_right">保存</div>
+				</div>
+			</div>	
+			<div class="row marpad">
+				<div class="col-xs-12 marpad" style="padding-top:10px;">
+					<!-- 没有照片的情况 -->
+					<!-- <div class="top_img_f">
+							
+					</div> -->
+					<!-- 有照片的情况 -->
+					<div class="top_img_t">
+						<img src="./images/setupfood/1.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin:0;padding:0;">
+				<div class="col-xs-12 top_input">
+					<input type="text" name="" value="荷包蛋配炒肉">
+				</div>
+			</div>
+			<div class="row marpad">
+				<div class="col-xs-12 top_text padtop">
+					<!-- <input type="textarea" name="" placeholder="输入这道美食背后的故事"> -->
+					<textarea placeholder="输入这道美食背后的故事"></textarea>
+				</div>
+			</div>
+			<div class="row marpad">
+				<h4 style="font-weight: 700;">用料</h4>
+				<h5  style="color:#ccc">猜你可能需要用到：</h5>
+				<div class="col-xs-12" style="padding-bottom:5px;border-bottom: 1px solid #ccc;">
+					<ul class="choice">
+						<li>米饭</li>
+						<li>盐</li>
+						<li>洋葱</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row marpad">
+				<div class="col-xs-12 marpad">
+					<div class="col-xs-6 marpad material">
+						<div class="col-xs-4 marpad">食材:</div>
+						<div class="col-xs-8 marpad "><input type="text" name="" placeholder="如鸡蛋"></div>
+					</div>
+					<div class="col-xs-6 marpad material">
+						<div class="col-xs-4 marpad">用量:</div>
+						<div class="col-xs-8 marpad "><input type="text" name="" placeholder="如一只"></div>
+					</div>
+
+				</div>
+				<div class="col-xs-12 marpad" style="padding-top:10px;">
+					<div class="col-xs-6 text-left  titcolor">再增加一行</div>
+					<div class="col-xs-6 text-right titcolor">调整用料</div>
+				</div>
+			</div>
+			<div class="row marpad">
+				<div class="col-xs-12 marpad padtop">
+					<div class="col-xs-6 marpad" style="font-size: 1.7rem;">做法</div>
+					<div class="col-xs-6 marpad text-right titcolor" style="font-size: 1.7rem;">批量上传</div>
+				</div>
+				<h4 style="font-weight: 700;margin-top:10px">步骤1</h4>
+				<div class="step_img">
+					<img src="./images/setupfood/2.jpg">
+				</div>
+				<div class="col-xs-12 step_text padtop">
+					<textarea placeholder="添加步骤说明"></textarea>
+				</div>
+				<div class="col-xs-12 marpad" style="padding-top:10px;">
+					<div class="col-xs-6 text-left  titcolor">再增加一行</div>
+					<div class="col-xs-6 text-right titcolor">调整步骤</div>
+				</div>
+			</div>
+			<div class="row marpad">
+				<h4 style="font-weight: 700;">小贴士</h4>
+				<div class="col-xs-12 setup_tips">
+					<textarea placeholder="添加小贴士，这道菜有哪些可供朋友参考的小技巧"></textarea>
+				</div>
+			</div>
+			<div class="row marpad foodbox">
+				<div class="col-xs-12 marpad"  style="border-bottom:1px solid #ccc;padding-bottom: 10px;">
+					<div class="col-xs-7 marpad text-left"><span class="fooder_text">推荐至分类</span></div>
+					<div class="col-xs-5  text-right"><span class="glyphicon glyphicon-menu-right fooder_icon"></span></div>
+				</div>
+			</div>
+			<div class="row marpad">
+				<div class="col-xs-12 marpad">
+					<div class="col-xs-7 marpad">
+						<div class="col-xs-12 marpad foodtext2">独家菜谱</div>
+						<div class="col-xs-12 marpad foodtext3">仅在小厨房发布，拥有特殊标识</div>
+					</div>
+					<div class="col-xs-5 marpad text-center foodbut">
+						<div class="switch" data-on="info" data-off="success">
+						    <input type="checkbox" name="my_clickbut" checked />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 marpad foodbot text-center ">
+					发布菜单
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        let foot=new Vue({
+            el:'#setupfood2',
+            methods:{
+                jimp_html:function(message){
+                    location=message;
+                },
+            }
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>市集</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <!--加载bootstrap框架-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--加载自定义公用样式-->
+    <link rel="stylesheet" href="css/css.css">
+    <!--加载阿里云图标库-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+    <!--加载显示成的样式-->
+    <link rel="stylesheet" href="css/fair.css">
+    <!--加载vue框架库-->
+    <script src="js/vue.min.js"></script>
+    <!--加载vue公共主键-->
+    <script src="commen/commen.js"></script>
+    <!--加载jquery库-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!--加载bootstrap插件-->
+    <script src="js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<header></header>
+<div id="Top">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default top_hei navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="top_box">
+                        <div class="gongneng1">
+                            <a href="#">
+                                <span class="iconfont icon-emizhifeiji"></span>
+                            </a>
+                        </div>
+                        <div class="seText">
+                            <input type="text" placeholder="输入商品">
+                        </div>
+                        <div class="gongneng1"  @click="jimp_html('shoppingCart')">
+                            <a href="#">
+                                <!-- <span class="iconfont icon-briefcase"> </span> -->
+                                <span class="iconfont icon-gouwuche"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        el:'#Top',
+        methods:{
+            jimp_html:function(message){
+                location=message;
+            },
+            jimp_html2:function(message){
+                location=message;
+            },
+        }
+    })
+</script>
+<div class="myApp1">
+    <div id="miam">
+        <div class="container-fluid">
+            <div class="row" id="one">
+                <nve_box :itemstow="itemstow"></nve_box>
+                <script>
+                   let nvr= new Vue({
+                        el:'#one',
+                        data:{
+                            itemstow:[
+                                {name:"烘焙",pic:'./images/smallpic/hongpei.png'},
+                                {name:"水果蔬菜",pic:'./images/smallpic/flaoer.png'},
+                                {name:"器具",pic:'./images/smallpic/rankings.png'},
+                                {name:"领卷",pic:'./images/smallpic/lingjuan.png'},
+                                {name:"方便食品",pic:'./images/smallpic/cadao.png'},
+                                {name:"进口食品",pic:'./images/smallpic/feiji.png'},
+                                {name:"时令鲜食",pic:'./images/smallpic/timefoot.png'},
+                                {name:"全部分类",pic:'./images/smallpic/quanbu.png'},
+                            ],
+                        }
+                    })
+                </script>
+            </div>
+            <div class="row">
+                <!--新人礼包-->
+                <div class="newpepro">
+                    <h2>￥300</h2>
+                    <div class="newGift">
+                        <span>新人礼包</span>
+                    </div>
+                    <a href="#">戳此领取&gt;</a>
+                    <p>
+                        <span>妖隆坚果</span><span>小煎锅</span>
+                    </p>
+                    <p>
+                        <span>新恒结衣同款烤箱</span>
+                    </p>
+                </div>
+            </div>
+            <!--市集新上市-->
+            <div class="row">
+                <div class="new_fair">
+                    <!--标题与更多盒子-->
+                    <div class="title">
+                        <p class="text1">
+                            <span>市集新市</span>
+                            <a href="#">查看更多</a>
+                        </p>
+                        <span>好评新货，限时折扣</span>
+                    </div>
+                    <!--商品盒子-->
+                    <div class="wuping">
+                        <div class="log_wupin">
+                            <div class="foot_box">
+                                <div class="pic_foot">
+                                    <img src="images/taqu.jpg" alt="">
+                                    <div class="baoyou">包信</div>
+                                </div>
+                                <p class="goods_name">再多一点蛋糕</p>
+                                <p class="introduce">XXX明星同款蛋糕</p>
+                                <p class="sign">
+                                    <span>￥27.5</span>
+                                    <del>￥29.5</del>
+                                    <i>4.9分</i>
+                                </p>
+                            </div>
+                            <div class="foot_box">
+                                <div class="pic_foot">
+                                    <img src="images/taqu.jpg" alt="">
+                                    <div class="baoyou">包信</div>
+                                </div>
+                                <p class="goods_name">再多一点蛋糕</p>
+                                <p class="introduce">XXX明星同款蛋糕</p>
+                                <p class="sign">
+                                    <span>￥27.5</span>
+                                    <del>￥29.5</del>
+                                    <i>4.9分</i>
+                                </p>
+                            </div>
+                            <div class="foot_box">
+                                <div class="pic_foot">
+                                    <img src="images/taqu.jpg" alt="">
+                                    <div class="baoyou">包信</div>
+                                </div>
+                                <p class="goods_name">再多一点蛋糕</p>
+                                <p class="introduce">XXX明星同款蛋糕</p>
+                                <p class="sign">
+                                    <span>￥27.5</span>
+                                    <del>￥29.5</del>
+                                    <i>4.9分</i>
+                                </p>
+                            </div>
+                            <div class="foot_box">
+                                <div class="pic_foot">
+                                    <img src="images/taqu.jpg" alt="">
+                                    <div class="baoyou">包信</div>
+                                </div>
+                                <p class="goods_name">再多一点蛋糕</p>
+                                <p class="introduce">XXX明星同款蛋糕</p>
+                                <p class="sign">
+                                    <span>￥27.5</span>
+                                    <del>￥29.5</del>
+                                    <i>4.9分</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="foot_recommend">
+                    <div class="foot_recommend1">
+                        <img src="images/foot_recommend.png" alt="" />
+                        <div>
+                            <p>
+                                <a href="#">红枣核桃糕点，坚果莲藕羹……女孩都爱吃</a>
+                            </p>
+                            <span>全店九折优惠</span>
+                        </div>
+                    </div>
+                    <div class="foot_recommend1">
+                        <img src="images/foot_recommend.png" alt="" />
+                        <div>
+                            <p>
+                                <a href="#">红枣核桃糕点，坚果莲藕羹……女孩都爱吃</a>
+                            </p>
+                            <span>优惠大酬宾满100-20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--猜你喜欢-->
+            <div class="row">
+                <!--这是一个瀑布流加载数据-->
+                <div class="like_you">
+                    <lable>猜你喜欢</lable>
+                    <div class="guess_youlike">
+                        <div class="guess_box">
+                            <div><img src="images/jici.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/bangjian.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/shiwu2.jpg" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/baozi.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/bangjian.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/baozi.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 【台诚直营】台式纯肉手工香肠180g*4盒 | 顺</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/jici.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                        <div class="guess_box">
+                            <div><img src="images/jici.PNG" alt="" /></div>
+                            <p class="xianqing">
+                                <a href="#"> 新奥尔良烤鸡翅热销全国，是家常美味食物不是空间大不是看见的哈萨克</a>
+                            </p>
+                            <span><a href="#">别有一方滋味|美味首选</a></span>
+                            <div class="goods_money">
+                                <span class="money">￥20元</span>
+                                <span class="sales_volume">已售7267</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="bottom_end">----到底啦----</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<footer >
+    <nav class="navbar navbar-default navbar-fixed-bottom" id="foot">
+        <foot_box :data="list" :active="active"></foot_box>
+        <script type="text/javascript">
+            let foot=new Vue({
+                el:'#foot',
+                data:{
+                    list:[
+                        {text:'小厨房',tubiao:'icon-home',html:'index'},
+                        {text:'市集',tubiao:'icon-shichang',html:'fair'},
+                        {text:'收藏',tubiao:'icon-aixin',html:'collection'},
+                        {text:'信箱',tubiao:'icon-xinfeng-kai',html:'mailbox'},
+                        {text:'我',tubiao:'icon-weibiaoti-_huabanfuben',html:'myCenter'},
+                    ],
+                    active:1,
+                },
+            })
+        </script>
+    </nav>
+</footer>
+
+
+
+</body>
+</html>

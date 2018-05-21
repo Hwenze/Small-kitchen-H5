@@ -1,0 +1,218 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/vue.min.js"></script>
+    <script src="js/indexvue.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="commen/commen.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- 头部 -->
+<div id="Top">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-default top_hei navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="top_box">
+                        <div class="gongneng1">
+                            <a href="upload.html">
+                                <span class="iconfont icon-jia"></span>
+                            </a>
+                        </div>
+                        <div class="seText">
+                            <input type="text" placeholder="输入内容" @click = "jimp_html2('search1')">
+                        </div>
+                        <div class="gongneng1" @click="jimp_html('basket')">
+                            <a href="#">
+                                <span class="iconfont icon-briefcase"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 中间 -->
+<div id="myApp">
+    <div id="miam">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- 导航条 -->
+                <div id="classbox" class="nvigaTion">
+                    <template>
+                        <div class="classnav" v-for="x in items" @click="jimp_html(x.html)">
+                            <div>
+                                <img :src='x.pic' alt="">
+                            </div>
+                            <p>{{x.name}}</p>
+                        </div>
+                    </template>
+                </div>
+                <!--每周推荐菜谱-->
+                <div class="weekly_Box">
+                    <div class="weekly_pic">
+                        <img src="images/caipu/1.png" alt="">
+                        <div>
+                            <a href="#">
+                                <h4>本周</h4>
+                                <h5>流行菜谱</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="weekly_pic">
+                        <img src="images/caipu/3.png" alt="">
+                        <div>
+                            <a href="#">
+                                <h4>查看好友</h4>
+                                <h5>并关注他们</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--每日推荐盒子-->
+                <div class="today">
+                    <!--轮播图-->
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- 对应图片下标 -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- 要轮播的图片-->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/zaocan.jpg" alt="..." />
+                            </div>
+                            <div class="item">
+                                <img src="images/wucan.jpg" alt="..." />
+                            </div>
+                            <div class="item">
+                                <img src="images/wancan.jpg" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--广告盒子-->
+                <div class="banner_box">
+                    <img src="images/banner1.jpg" alt="">
+                    <p>
+                        高阶吃货clud,爱吃的你不可错过
+                        <button>广告&or;</button>
+                    </p>
+                </div>
+            </div>
+            <!--可拖动盒子-->
+            <div class="row">
+                <div class="title_lable">
+                    <p class="title_box">
+                        <label>本周食材</label>
+                        <a href="#">查看更多</a>
+                    </p>
+                </div>
+                <div class="shicai">
+                    <div class="touch" v-for="x in itemsthree">
+                        <div class="studio_box">
+                            <div class="studio_class">
+                                <img :src="x.pic" alt="扣肉"/>
+                                <div>
+                                    <a href="#">{{x.discount}}</a>
+                                    <p>￥{{x.maney}}</p>
+                                </div>
+                            </div>
+                            <p>{{x.op}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="title_lable">
+                    <p class="title_box">
+                        <label>厨studio课堂</label>
+                        <a href="#">查看更多</a>
+                    </p>
+                </div>
+                <div class="shicai">
+                    <div class="touch" v-for="x in itemsfort">
+                        <div class="studio_box">
+                            <div class="studio_class">
+                                <img :src="x.pic" alt="扣肉"/>
+                                <div>
+                                    <a href="#" class="btn ">{{x.discount}}</a>
+                                    <p>{{x.name}}</p>
+                                </div>
+                            </div>
+                            <p>{{x.op}}</p>
+                            <span>{{x.number}}人参与</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="title_lable">
+                    <p class="title_box">
+                        <label>厨studio课堂</label>
+                        <a href="#">查看更多</a>
+                    </p>
+                </div>
+                <div class="shicai">
+                    <div class="touch" v-for="x in itemsfort">
+                        <div class="studio_box">
+                            <div class="studio_class">
+                                <img :src="x.pic" alt="扣肉"/>
+                                <div>
+                                    <a href="#" class="btn ">{{x.discount}}</a>
+                                    <p>{{x.name}}</p>
+                                </div>
+                            </div>
+                            <p>{{x.op}}</p>
+                            <span>{{x.number}}人参与</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+<footer >
+    <nav class="navbar navbar-default navbar-fixed-bottom" id="foot">
+        <foot_box :data="list" :active="active"></foot_box>
+        <script type="text/javascript">
+            let foot=new Vue({
+                el:'#foot',
+                data:{
+                    list:[
+                        {text:'小厨房',tubiao:'icon-home',html:'index'},
+                        {text:'市集',tubiao:'icon-shichang',html:'fair'},
+                        {text:'收藏',tubiao:'icon-aixin',html:'collection'},
+                        {text:'信箱',tubiao:'icon-xinfeng-kai',html:'mailbox'},
+                        {text:'我',tubiao:'icon-weibiaoti-_huabanfuben',html:'myCenter'},
+                    ],
+                    active:0,
+                },
+            })
+        </script>
+    </nav>
+</footer>
+
+
+</body>
+</html>

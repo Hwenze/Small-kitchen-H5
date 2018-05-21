@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:62.5%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>购物车</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="./css/shoppingCart.css">
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="./js/shoppingCart.js"></script>
+</head>
+<body>
+<div id="myApp">
+    <header>
+        <div>
+            <a href="wholeBuy"><img src="images/xiangzuo1.png" alt=""></a>
+        </div>
+        <div>购物车</div>
+        <div>
+            <span>编辑</span>
+        </div>
+    </header>
+    <div id="Select" class="main">
+        <chec-multi :goods_cart="goods_cart" ></chec-multi>
+        <!--<div class="main_once">-->
+            <!--通过商家全选，显示商家盒子-->
+            <!--单选商品，显示商品-->
+
+        <!--</div>-->
+        <div class="main_footer">已享全店包邮</div>
+    </div>
+
+    <footer>
+        <div class="footer_left">
+        <span class="radio">
+           <div :class="{ checkbox_nex: true, 'activeback': buer1 }" @click="quanxuan()"></div>
+        </span>
+            <span class="wholeSelect">全选</span>
+        </div>
+        <div class="footer_right">
+            <div class="footer_text">
+                <p class="footer_text_p1">合计 ￥{{total}}</p>
+                <p class="footer_text_p2">不含运费</p>
+            </div>
+            <a href="firmOrder">
+                <div class="footer_btn">结算</div>
+            </a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

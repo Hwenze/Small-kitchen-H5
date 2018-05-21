@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body{
+    height: 100%;
+}
+header .box1{
+    position: relative;
+    text-align: center;
+    margin-top: 3%;
+    background: white;
+}
+header .box1 a:nth-child(1){
+    font-size: 2.5em;
+    position: absolute;
+    left: 5%;
+    color: red;
+}
+header .box1 span:nth-child(2){
+    margin-top: 100px;
+    font-size: 3em;
+
+}
+header .box1 a:nth-child(3){
+    font-size: 2.5em;
+    position: absolute;
+    right: 5%;
+    color: #ff4848;
+}
+.main{
+    margin-top: 12%;
+    height: 100%;
+}
+.main .box2{
+    height: 100%;
+
+}
+.main textarea{
+    position: fixed;
+    height: 100%;
+    width: 90%;
+    border: none;
+}
+.main textarea:focus{
+    outline: none;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    header .box1 a:nth-child(1),header .box1 a:nth-child(3) {
+        font-size: 1.2em;
+    }
+    header .box1 span:nth-child(2) {
+        margin-top: 100px;
+        font-size: 1.4em;
+    }
+
+}

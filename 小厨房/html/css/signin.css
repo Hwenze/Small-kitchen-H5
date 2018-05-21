@@ -1,0 +1,126 @@
+*,.marpad{
+	padding: 0;
+	margin: 0;
+}
+input,textarea{
+	outline:none;	
+}
+/*相对手机顶部定位*/
+#signinbg{
+	position: relative;
+}
+/*登录页面背景图片*/
+.signin_bg{
+	background: url(../images/signin/bigan3.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+/*logo图标*/
+.signinlogo{
+	position: absolute;
+	top: 20%;
+	left:50%;
+	margin-left:-60px;
+}
+/*登录输入框*/
+.signincontent{
+	width: 90%;
+	height: 30%;
+	position: absolute;
+	top: 30%;
+	left:50%;
+	margin-left: -45%;
+	border-radius: 15px;
+	background: rgba(255,255,255,.6);
+}
+.signinbox{
+	padding:5% 0;
+	height: 25%;
+}
+.signinbox input{
+	height: 3rem;
+}
+/*.signinbox input:-webkit-autofill{*/
+	/*box-shadow:  0 0 0 1000px #fff inset;*/
+/*}*/
+/*按钮样式*/
+.signinbut{
+	width: 90%;
+	height:2.5rem;	
+	position: absolute;
+	top: 50%;
+	left:50%;
+	margin-left: -45%;
+	border-bottom-left-radius: 15px;	
+	border-bottom-right-radius: 15px;
+	border: 0;
+	color: #000;
+	background:rgba(255,255,255,.5);
+}
+/*or样式*/
+.signinor{
+	width: 90%;
+	position: absolute;
+	top: 70%;
+	left:50%;
+	margin-left: -45%;
+	line-height: 0px;
+}
+/*外链接*/
+.signinorder{
+	width: 90%;
+	position: absolute;
+	top: 75%;
+	left:50%;
+	margin-left: -45%;
+}
+.signinbox span{
+	font-size: 3rem;
+}
+.signinbox input{
+	background-color: rgba(82,133,126,.0);
+	border:0;
+	color:#000;
+}
+.signinorder > .row > .col-xs-4{
+	text-align: center;
+	margin: 0 auto;
+}
+.bor{
+	border-bottom: 1px solid #000;
+}
+/*文本输入框颜色：黑色*/
+input::-webkit-input-placeholder{
+    color:#000;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#000;
+}
+ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#000;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#000;
+}
+@media screen and (max-height: 640px) {
+	.signinbut{
+		top: 55%;
+	}
+}
+@media screen and (min-height: 667px) {
+	.signin_bg{
+		background-size: 120% 100%;
+	} 
+	.signincontent{
+		height: 25%;
+	}
+}
+@media screen and (min-height: 700px) {
+	.signincontent{
+		height: 24%;
+	}
+}
+@media screen and (max-height: 568px) {
+	.signinbut{
+		top: 55%;
+	}
+}

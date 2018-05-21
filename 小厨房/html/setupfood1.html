@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>创建菜谱</title>
+	<link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/setupfood1.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_658147_e5xtjos9untmaemi.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/vue.min.js"></script>
+	<script type="text/javascript" src="./js/setupfood1.js"></script>
+</head>
+<body>
+	<div id="setupfood1" class="container-fluid">
+		<form>
+			<div id="foot" class="row">
+				<div class="col-xs-12" style="padding-top:10px;">
+					<div class="col-xs-3 text-center top_left" @click="jimp_html('upload')">关闭</div>
+					<div class="col-xs-6 text-center top-cent">加入菜谱</div>
+					<div class="col-xs-3 text-center top_right" @click="jimp_html('setupfood2')">添加</div>
+				</div>
+				<div class="col-xs-12" style="padding-top:2rem;">
+					<div class="setupinput"><input id="foodname" type="text" name="" placeholder="添加菜谱名称"></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+<script type="text/javascript">
+    $(function(){
+        let foot=new Vue({
+            el:'#foot',
+            methods:{
+                jimp_html:function(message){
+                    location=message;
+                },
+            }
+        })
+    })
+</script>
+
+</html>

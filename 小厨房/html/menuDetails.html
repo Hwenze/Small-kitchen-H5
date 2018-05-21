@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>菜谱详情</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png"/>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="bootscss/bootstrap.min.css">
+    <link rel="stylesheet" href="bootscss/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menuDetails.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"  src="./js/vue.min.js"></script>
+    <script src="js/menuDetails.js"></script>
+
+</head>
+<body>
+    <header id="Top" class="navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row box1">
+                <i class="glyphicon glyphicon-menu-left" @click="jimp_html('classificationDetails')"></i>
+                <i class="iconfont icon-tanxintanhua"></i>
+                <i class="iconfont icon-pengyouquan"></i>
+                <i class="iconfont icon-diandiandian"></i>
+                <i class="iconfont icon-shoutidai_y pull-right"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--中间主体内容-->
+    <div id="Main" class="main" >
+        <div class="container-fluid">
+            <div class="row">
+                <!--左边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+
+                <!--中间内容 模板循环-->
+                <div class="col-sm-8 col-xs-12 box2" >
+                    <!--菜品图片-->
+                    <div class="text-center box2_1">
+                        <img :src="albums">
+                        <h4>{{title}}</h4>
+                        <p>8.5分综合评分 · 151人最近7天做过</p>
+                    </div>
+
+                    <!--作者简介-->
+                    <div class="box2_2">
+                        <img src="images/08.JPG" alt="..."  class="img-circle"/>
+                        <span>作者</span>
+                        <span>小慈xiaoci</span>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;{{imtro}}</p>
+                    </div>
+
+                    <!--用料-->
+                    <div>
+                        <span>{{ingredients}}</span><br>
+                        <span>{{burden}}</span>
+                    </div>
+                    
+                    <!--步骤循环-->
+                    <div class="box2_4">
+                        <div class="box2_4_1" v-for="(x,index) in steps">
+                            <p>步骤{{index+1}}</p>
+                            <p><img :src="x.img"></p>
+                            <p>{{x.step}}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--右边空白线-->
+                <div class="col-sm-2 hidden-xs"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="foot" class="navbar-fixed-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-xs-4 text-center box3 box3_1">
+                    <i id="xx" class="iconfont icon-kongxinaixin"></i>
+                    <a href="#">收藏</a>
+                </div>
+                <div class="col-sm-4 col-xs-4 text-center box3" @click="jimp_html('addMenu')">
+                    <i class="iconfont icon-add_note"></i>
+                    <a href="#">加菜单</a>
+                </div>
+                <div class="col-sm-4 col-xs-4 text-center box3">
+                    <i class="iconfont icon-xiangji"></i>
+                    <a href="#">传作品</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script type="text/javascript">
+    $(function(){
+        $("#xx").click(function(){
+            if($(this).hasClass("iconfont icon-kongxinaixin")){
+                $(this).removeClass("iconfont icon-kongxinaixin");
+                $(this).addClass("glyphicon glyphicon-heart");
+            }else{
+                $(this).removeClass("glyphicon glyphicon-heart");
+                $(this).addClass("iconfont icon-kongxinaixin");
+            }    
+        });
+    })
+</script>
+</html>
